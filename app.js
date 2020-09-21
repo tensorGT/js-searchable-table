@@ -16,3 +16,12 @@ var transactions = [
 var state = loadInitialState();
 
 var searchBox = document.getElementById("search-box");
+var categorySelect = document.getElementById("category-select");
+var statusSelect = document.getElementById("status-select");
+var resetBtn = document.getElementById("reset-btn");
+var emptyResetBtn = document.getElementById("empty-reset-btn");
+var tableBody = document.getElementById("table-body");
+var emptyState = document.getElementById("empty-state");
+var summaryEl = document.getElementById("result-summary");
+var sortButtons = document.querySelectorAll(".sort-btn");
+

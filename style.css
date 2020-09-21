@@ -18,3 +18,13 @@ body {
 }
 
 .page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.page-head h1 {
+  font-size: 1.7rem;
