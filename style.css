@@ -28,3 +28,13 @@ body {
 
 .page-head h1 {
   font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+
+.page-head p {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.summary-pill {
+  font-size: 0.85rem;

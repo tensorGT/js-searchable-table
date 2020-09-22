@@ -25,3 +25,12 @@ var emptyState = document.getElementById("empty-state");
 var summaryEl = document.getElementById("result-summary");
 var sortButtons = document.querySelectorAll(".sort-btn");
 
+function loadInitialState() {
+  var defaults = { q: "", category: "all", status: "all", sortCol: "date", sortDir: "desc" };
+
+  // check URL query params first, then localStorage
+  var params = new URLSearchParams(window.location.search);
+  if (params.toString()) {
+    return {
+      q: params.get("q") || "",
+      category: params.get("category") || "all",
