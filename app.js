@@ -34,3 +34,12 @@ function loadInitialState() {
     return {
       q: params.get("q") || "",
       category: params.get("category") || "all",
+      status: params.get("status") || "all",
+      sortCol: params.get("sort") || "date",
+      sortDir: params.get("dir") || "desc"
+    };
+  }
+
+  try {
+    var saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {

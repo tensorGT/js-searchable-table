@@ -38,3 +38,13 @@ body {
 
 .summary-pill {
   font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* filter controls */
+.controls {
+  background-color: #ffffff;
