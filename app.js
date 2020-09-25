@@ -43,3 +43,12 @@ function loadInitialState() {
   try {
     var saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
+      return Object.assign({}, defaults, JSON.parse(saved));
+    }
+  } catch (err) {
+    console.log("storage error", err);
+  }
+  return defaults;
+}
+
+function syncState() {
