@@ -52,3 +52,11 @@ function loadInitialState() {
 }
 
 function syncState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+
+  var params = new URLSearchParams();
+  if (state.q) params.set("q", state.q);
+  if (state.category !== "all") params.set("category", state.category);
+  if (state.status !== "all") params.set("status", state.status);
+  params.set("sort", state.sortCol);
+  params.set("dir", state.sortDir);
