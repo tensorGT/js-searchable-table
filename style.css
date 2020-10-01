@@ -68,3 +68,13 @@ body {
 .search-group {
   flex: 1 1 240px;
 }
+
+.control-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.control-group input,

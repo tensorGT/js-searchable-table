@@ -60,3 +60,13 @@ function syncState() {
   if (state.status !== "all") params.set("status", state.status);
   params.set("sort", state.sortCol);
   params.set("dir", state.sortDir);
+
+  var newUrl = window.location.pathname + "?" + params.toString();
+  window.history.replaceState(null, "", newUrl);
+}
+
+function applyInputsFromState() {
+  searchBox.value = state.q;
+  categorySelect.value = state.category;
+  statusSelect.value = state.status;
+}
