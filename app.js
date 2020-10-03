@@ -70,3 +70,12 @@ function applyInputsFromState() {
   categorySelect.value = state.category;
   statusSelect.value = state.status;
 }
+
+function renderTable() {
+  var query = state.q.trim().toLowerCase();
+
+  var filtered = transactions.filter(function (row) {
+    if (state.category !== "all" && row.category !== state.category) return false;
+    if (state.status !== "all" && row.status !== state.status) return false;
+    if (query) {
+      var matchMerchant = row.merchant.toLowerCase().indexOf(query) !== -1;
