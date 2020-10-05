@@ -79,3 +79,12 @@ function renderTable() {
     if (state.status !== "all" && row.status !== state.status) return false;
     if (query) {
       var matchMerchant = row.merchant.toLowerCase().indexOf(query) !== -1;
+      var matchCategory = row.category.toLowerCase().indexOf(query) !== -1;
+      if (!matchMerchant && !matchCategory) return false;
+    }
+    return true;
+  });
+
+  filtered.sort(function (a, b) {
+    var valA = a[state.sortCol];
+    var valB = b[state.sortCol];
