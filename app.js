@@ -88,3 +88,12 @@ function renderTable() {
   filtered.sort(function (a, b) {
     var valA = a[state.sortCol];
     var valB = b[state.sortCol];
+    var cmp = 0;
+
+    if (typeof valA === "number" && typeof valB === "number") {
+      cmp = valA - valB;
+    } else {
+      cmp = String(valA).localeCompare(String(valB));
+    }
+
+    return state.sortDir === "asc" ? cmp : -cmp;
