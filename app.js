@@ -97,3 +97,12 @@ function renderTable() {
     }
 
     return state.sortDir === "asc" ? cmp : -cmp;
+  });
+
+  // update sort header arrows
+  sortButtons.forEach(function (btn) {
+    var col = btn.dataset.col;
+    var arrow = btn.querySelector(".arrow");
+    if (col === state.sortCol) {
+      btn.classList.add("active");
+      arrow.textContent = state.sortDir === "asc" ? "▲" : "▼";
