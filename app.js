@@ -106,3 +106,12 @@ function renderTable() {
     if (col === state.sortCol) {
       btn.classList.add("active");
       arrow.textContent = state.sortDir === "asc" ? "▲" : "▼";
+    } else {
+      btn.classList.remove("active");
+      arrow.textContent = "";
+    }
+  });
+
+  summaryEl.textContent = "Showing " + filtered.length + " of " + transactions.length + " items";
+  tableBody.innerHTML = "";
+
