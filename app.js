@@ -115,3 +115,11 @@ function renderTable() {
   summaryEl.textContent = "Showing " + filtered.length + " of " + transactions.length + " items";
   tableBody.innerHTML = "";
 
+  if (filtered.length === 0) {
+    emptyState.hidden = false;
+    return;
+  }
+
+  emptyState.hidden = true;
+  filtered.forEach(function (row) {
+    var tr = document.createElement("tr");

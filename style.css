@@ -128,3 +128,13 @@ td {
   text-align: left;
   padding: 12px 14px;
   border-bottom: 1px solid #e2e8f0;
+}
+
+thead {
+  background-color: #f1f5f9;
+}
+
+.sort-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
