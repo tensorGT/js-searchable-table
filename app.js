@@ -123,3 +123,13 @@ function renderTable() {
   emptyState.hidden = true;
   filtered.forEach(function (row) {
     var tr = document.createElement("tr");
+    var statusClass = row.status === "Paid" ? "status-paid" : "status-pending";
+    tr.innerHTML =
+      "<td>" + row.date + "</td>" +
+      "<td><strong>" + row.merchant + "</strong></td>" +
+      '<td><span class="cat-badge">' + row.category + "</span></td>" +
+      "<td>$" + row.amount.toFixed(2) + "</td>" +
+      '<td><span class="status-badge ' + statusClass + '">' + row.status + "</span></td>";
+    tableBody.appendChild(tr);
+  });
+}
