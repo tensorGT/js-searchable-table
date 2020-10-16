@@ -133,3 +133,12 @@ function renderTable() {
     tableBody.appendChild(tr);
   });
 }
+
+function resetAll() {
+  state = { q: "", category: "all", status: "all", sortCol: "date", sortDir: "desc" };
+  applyInputsFromState();
+  syncState();
+  renderTable();
+}
+
+searchBox.addEventListener("input", function () {

@@ -148,3 +148,13 @@ thead {
   align-items: center;
   gap: 5px;
 }
+
+.sort-btn:hover {
+  color: #2563eb;
+}
+
+.sort-btn.active {
+  color: #2563eb;
+}
+
+tbody tr:hover {
