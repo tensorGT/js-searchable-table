@@ -142,3 +142,12 @@ function resetAll() {
 }
 
 searchBox.addEventListener("input", function () {
+  state.q = searchBox.value;
+  syncState();
+  renderTable();
+});
+
+categorySelect.addEventListener("change", function () {
+  state.category = categorySelect.value;
+  syncState();
+  renderTable();
