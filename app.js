@@ -151,3 +151,12 @@ categorySelect.addEventListener("change", function () {
   state.category = categorySelect.value;
   syncState();
   renderTable();
+});
+
+statusSelect.addEventListener("change", function () {
+  state.status = statusSelect.value;
+  syncState();
+  renderTable();
+});
+
+sortButtons.forEach(function (btn) {
