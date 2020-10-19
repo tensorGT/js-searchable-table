@@ -160,3 +160,12 @@ statusSelect.addEventListener("change", function () {
 });
 
 sortButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var col = btn.dataset.col;
+    if (state.sortCol === col) {
+      state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+    } else {
+      state.sortCol = col;
+      state.sortDir = "asc";
+    }
+    syncState();

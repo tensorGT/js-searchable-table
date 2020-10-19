@@ -178,3 +178,13 @@ tbody tr:hover {
   padding: 2px 9px;
   border-radius: 999px;
 }
+
+.status-paid {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
