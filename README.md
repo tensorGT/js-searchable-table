@@ -7,3 +7,4 @@ Built a client-side data table in plain JavaScript to see how search, sort, and 
 - Click any column header to sort ascending / descending
 - Category and status dropdown filters
 - Empty state message with a quick reset button
+- Saves filter & sort state in both the URL query string and `localStorage`

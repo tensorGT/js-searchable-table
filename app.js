@@ -169,3 +169,12 @@ sortButtons.forEach(function (btn) {
       state.sortDir = "asc";
     }
     syncState();
+    renderTable();
+  });
+});
+
+resetBtn.addEventListener("click", resetAll);
+emptyResetBtn.addEventListener("click", resetAll);
+
+applyInputsFromState();
+renderTable();

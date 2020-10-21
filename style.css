@@ -188,3 +188,13 @@ tbody tr:hover {
   background-color: #fef3c7;
   color: #92400e;
 }
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+}
+
+.empty-state p {
+  margin-bottom: 12px;
+}
